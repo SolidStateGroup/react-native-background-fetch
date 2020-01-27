@@ -34,7 +34,7 @@ public class HeadlessTask implements HeadlessJsTaskEventListener {
             Log.e(BackgroundFetch.TAG, "Failed to fetch ReactApplication.  Task ignored.");
             return;  // <-- Do nothing.  Just return
         }
-        HeadlessJsTaskConfig config = new HeadlessJsTaskConfig(HEADLESS_TASK_NAME, new WritableNativeMap(), 30000);
+        HeadlessJsTaskConfig config = new HeadlessJsTaskConfig(HEADLESS_TASK_NAME, new WritableNativeMap(), 9 * 60 * 1000);
         startTask(config);
     }
 
